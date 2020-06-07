@@ -20,7 +20,7 @@ def predict():
     int_features1 = int_features2.reshape(1, -1)
     prediction = model.predict(int_features1)
 
-    output = round(prediction[0])
+    output = prediction[0]
 
     return render_template('index.html', prediction_text='production will be    {}'.format(output))
 
